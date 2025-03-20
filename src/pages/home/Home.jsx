@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaAward, FaBook, FaHeartbeat, FaTshirt, FaHome, FaHandsHelping,FaUtensils , FaHandHoldingHeart, FaChild, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWheelchair, FaTransgender, FaMedal} from "react-icons/fa";
+import Contact from "../contact";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -88,53 +89,58 @@ export default function Home() {
   </div>
         </section>
 
-        {/* Our Causes Section */}
-        <section className="bg-white text-blue-900 py-16 px-6 md:px-12">
-  <motion.div initial="hidden" animate="visible" variants={fadeIn} className="max-w-4xl mx-auto text-center">
-    <h2 className="text-4xl font-extrabold text-blue-700">Our Causes</h2>
-    <p className="mt-3 text-lg font-medium text-gray-800">
+        <section 
+  className="relative bg-[url('/images/childs.jpeg')] bg-cover bg-center bg-no-repeat text-blue-900 py-16 px-6 md:px-12"
+>
+  <div className="absolute inset-0 bg-black/40"></div> {/* Dark overlay for better contrast */}
+  
+  <motion.div initial="hidden" animate="visible" variants={fadeIn} className="max-w-4xl mx-auto text-center relative">
+    <h2 className="text-4xl font-extrabold text-white">Our Causes</h2>
+    <p className="mt-3 text-lg font-medium text-gray-200">
       Making a difference in the lives of the underprivileged through compassionate initiatives.
     </p>
   </motion.div>
 
-  <div className="grid md:grid-cols-3 gap-10 mt-12 max-w-6xl mx-auto">
+  <div className="grid md:grid-cols-3 gap-10 mt-12 max-w-6xl mx-auto relative">
     {[
       {
         title: "Caring for the Elderly",
         desc: "Providing a safe, nurturing, and loving environment for senior citizens.",
-        icon: <FaHome className="text-blue-600 text-4xl" />,
+        icon: <FaHome className="text-white text-4xl" />,
       },
       {
         title: "Orphan Support",
         desc: "Ensuring orphaned children receive shelter, education, and emotional support.",
-        icon: <FaHandsHelping className="text-blue-600 text-4xl" />,
+        icon: <FaHandsHelping className="text-white text-4xl" />,
       },
       {
         title: "Food for the Needy",
         desc: "Distributing nutritious meals to underprivileged families and individuals.",
-        icon: <FaUtensils className="text-blue-600 text-4xl" />,
+        icon: <FaUtensils className="text-white text-4xl" />,
       },
     ].map((cause, index) => (
       <motion.div
         key={index}
-        className="bg-blue-50 p-8 rounded-2xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600"
+        className="bg-blue-900/70 p-8 rounded-2xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-500 text-white"
         whileHover={{ scale: 1.05 }}
       >
         <div className="flex items-center gap-4">
           {cause.icon}
-          <h3 className="text-2xl font-bold text-blue-700">{cause.title}</h3>
+          <h3 className="text-2xl font-bold">{cause.title}</h3>
         </div>
-        <p className="mt-4 text-gray-700 leading-relaxed">{cause.desc}</p>
+        <p className="mt-4 leading-relaxed">{cause.desc}</p>
       </motion.div>
     ))}
   </div>
 </section>
-<section className="bg-white text-blue-900 py-16 px-6 md:px-12">
+
+
+<section className="bg-gradient-to-b from-blue-500 to-blue-900 text-white py-16 px-6 md:px-12">
   {/* Header Section */}
   <motion.div initial="hidden" animate="visible" variants={fadeIn} className="max-w-4xl mx-auto text-center">
-    <h2 className="text-4xl font-extrabold text-blue-700">Honors & Awards</h2>
-    <p className="mt-3 text-lg font-medium text-gray-800">
-      Recognized for exceptional contributions to society with over **150+ prestigious awards**.
+    <h2 className="text-4xl font-extrabold">Honors & Awards</h2>
+    <p className="mt-3 text-lg font-medium">
+      Recognized for exceptional contributions to society with over <strong>150+ prestigious awards</strong>.
     </p>
   </motion.div>
 
@@ -158,19 +164,19 @@ export default function Home() {
     ].map((award, index) => (
       <motion.div 
         key={index} 
-        className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600 flex items-center gap-3"
+        className="bg-white/80 p-6 rounded-2xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-700 flex items-center gap-3 text-blue-900"
         whileHover={{ scale: 1.05 }}
       >
-        <FaAward className="text-blue-600 text-2xl" />
-        <p className="text-gray-800">{award}</p>
+        <FaAward className="text-blue-700 text-2xl" />
+        <p className="font-medium">{award}</p>
       </motion.div>
     ))}
   </div>
 
   {/* Additional Recognition */}
   <div className="mt-12 text-center">
-    <p className="text-lg text-gray-700">
-      Honored by **150+ distinguished organizations and Padma Shri awardees** for outstanding social service.  
+    <p className="text-lg">
+      Honored by <strong>150+ distinguished organizations and Padma Shri awardees</strong> for outstanding social service.  
       Our dedication continues in various social and cultural fields.
     </p>
   </div>
@@ -202,39 +208,7 @@ export default function Home() {
   </div>
 
   {/* Contact Info & Form Grid */}
-  <div className="grid md:grid-cols-2 gap-12 mt-12 max-w-5xl mx-auto">
-    {/* Contact Information */}
-    <div className="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-blue-600">
-      <h3 className="text-2xl font-bold text-blue-700">Our Contact Details</h3>
-      <ul className="mt-4 space-y-4 text-gray-800">
-        <li className="flex items-center gap-3">
-          <FaMapMarkerAlt className="text-blue-600 text-2xl" />
-          <span>Sector 1, Plot No. 75, Kopar Khairane, Navi Mumbai, Thane</span>
-        </li>
-        <li className="flex items-center gap-3">
-          <FaPhoneAlt className="text-blue-600 text-2xl" />
-          <a href="tel:+919876543210" className="hover:underline">+91 98765 43210</a>
-        </li>
-        <li className="flex items-center gap-3">
-          <FaEnvelope className="text-blue-600 text-2xl" />
-          <a href="mailto:info@sweethometrust.org" className="hover:underline">info@sweethometrust.org</a>
-        </li>
-      </ul>
-    </div>
-
-    {/* Contact Form */}
-    <div className="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-blue-600">
-      <h3 className="text-2xl font-bold text-blue-700">Send Us a Message</h3>
-      <form className="mt-4 space-y-4">
-        <input type="text" placeholder="Your Name" className="w-full p-3 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300" />
-        <input type="email" placeholder="Your Email" className="w-full p-3 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300" />
-        <textarea rows="4" placeholder="Your Message" className="w-full p-3 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300"></textarea>
-        <button type="submit" className="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-all">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
+  <Contact/>
 </section>
 
       </main>

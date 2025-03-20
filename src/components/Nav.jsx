@@ -18,13 +18,19 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8">
-          {["Home", "About", "Events", "Gallery", "Contact"].map((item) => (
-            <li key={item}>
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Donate", path: "/donate" },
+            { name: "Gallery", path: "/gallery" },
+            // { name: "Contact", path: "/contact" },
+          ].map(({ name, path }) => (
+            <li key={name}>
               <Link
-                href={`/${item.toLowerCase()}`}
+                href={path}
                 className="relative text-lg font-medium transition duration-300 hover:text-blue-800"
               >
-                {item}
+                {name}
                 {/* Underline effect */}
                 <motion.div
                   className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 scale-x-0 transition-transform origin-left"
@@ -50,14 +56,20 @@ const Navbar = () => {
           className="md:hidden bg-white bg-opacity-90 backdrop-blur-md text-blue-700 absolute top-full left-0 w-full py-4 shadow-lg border-t border-blue-300"
         >
           <ul className="flex flex-col items-center space-y-4">
-            {["Home", "About", "Events", "Gallery", "Contact"].map((item) => (
-              <li key={item}>
+            {[
+              { name: "Home", path: "/" },
+              { name: "About", path: "/about" },
+              { name: "Donate", path: "/donate" },
+              { name: "Gallery", path: "/gallery" },
+              // { name: "Contact", path: "/contact" },
+            ].map(({ name, path }) => (
+              <li key={name}>
                 <Link
-                  href={`/${item.toLowerCase()}`}
+                  href={path}
                   className="text-lg font-medium transition duration-300 hover:text-blue-800"
                   onClick={() => setIsOpen(false)}
                 >
-                  {item}
+                  {name}
                 </Link>
               </li>
             ))}
