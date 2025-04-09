@@ -10,11 +10,12 @@ const Contact=()=>{
           <ul className="mt-4 space-y-4 text-gray-800">
             <li className="flex items-center gap-3">
               <FaMapMarkerAlt className="text-blue-600 text-2xl" />
-              <span>Sector 1, Plot No. 75, Kopar Khairane, Navi Mumbai, Thane</span>
+              <span>Sector 1, Plot No. 51, Kopar Khairane, Navi Mumbai, Thane</span>
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-blue-600 text-2xl" />
-              <a href="tel:+919876543210" className="hover:underline">+91 98765 43210</a>
+              <a href="tel:9892687313" className="hover:underline">9892687313</a>
+              <a href="tel:7666655757" className="hover:underline">7666655757</a>
             </li>
             {/* <li className="flex items-center gap-3">
               <FaEnvelope className="text-blue-600 text-2xl" />
