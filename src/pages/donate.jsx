@@ -67,7 +67,7 @@ const Donate = () => {
           <p className="text-xl">Branch: Koparkhairne, Navi Mumbai</p>
 
           <p className="text-xl font-semibold mt-6">✅ UPI / QR Code</p>
-          <p className="text-xl">UPI ID: 9892687313</p>
+          <p className="text-xl">UPI ID: 9892687313@okbizaxis</p>
           <p className="text-xl">PhonePe / Google Pay accepted</p>
 
           <p className="text-xl font-semibold mt-6">📞 Need Assistance?</p>
