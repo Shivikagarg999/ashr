@@ -18,8 +18,8 @@ const Footer = () => {
           <h3 className="text-xl font-semibold">Contact Us</h3>
           <ul className="mt-3 space-y-2 text-gray-300">
             <li><FaMapMarkerAlt className="inline mr-2" /> Koparkhairane, Navi Mumbai, Maharashtra</li>
-            <li><FaPhone className="inline mr-2" /> +91 98765 43210</li>
-            <li><FaEnvelope className="inline mr-2" /> info@sweethometrust.org</li>
+            <li><FaPhone className="inline mr-2" /> 9892687313, 7666655757</li>
+            <li><FaEnvelope className="inline mr-2" /> info@sweethometrust.com</li>
           </ul>
         </div>
 
