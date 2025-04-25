@@ -58,7 +58,7 @@ const AboutPage = () => {
           ))}
         </div>
 
-        {/* Donation Section */}
+        
         {/* Donation Section */}
 <motion.div
   className="mt-16 bg-blue-600 text-white py-10 px-6 rounded-lg shadow-lg grid md:grid-cols-2 items-center"

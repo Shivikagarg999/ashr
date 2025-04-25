@@ -10,23 +10,23 @@ const Donate = () => {
       <Navbar/>
       <div className="min-h-screen bg-gray-50 flex flex-col items-center pt-28 px-6 py-12">
 
-      <section className="relative bg-[url('/images/sewa.jpeg')] mb-6 bg-cover w-full rounded-md bg-center bg-no-repeat py-36 px-6 md:px-12">
+      <section className="relative bg-[url('/images/nm.jpeg')] mb-6 bg-cover w-full rounded-md bg-center bg-no-repeat py-36 px-6 md:px-12">
   {/* Overlay for better readability */}
-  <div className="absolute inset-0 bg-black/50"></div> 
+  <div className="absolute inset-0 bg-black/10"></div> 
 
   {/* Header Section */}
   <motion.div
-    className="text-center mb-12 max-w-3xl mx-auto relative text-white"
-    initial={{ opacity: 0, y: -20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-  >
-    <h1 className="text-5xl font-bold mb-4">Make a Difference Today</h1>
-    <p className="text-lg">
-      Your donation supports our mission to provide food, shelter, and education to those in need.
-      Every contribution brings us closer to a better tomorrow.
-    </p>
-  </motion.div>
+  className="text-center mb-12 max-w-3xl mx-auto relative text-black"
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  <h1 className="text-5xl font-bold mb-4 drop-shadow-md">Make a Difference Today</h1>
+  <p className="text-lg drop-shadow-sm">
+    Your donation supports our mission to provide food, shelter, and education to those in need.
+    Every contribution brings us closer to a better tomorrow.
+  </p>
+</motion.div>
 </section>
 
       {/* Impact Section */}
@@ -67,11 +67,11 @@ const Donate = () => {
           <p className="text-xl">Branch: Koparkhairne, Navi Mumbai</p>
 
           <p className="text-xl font-semibold mt-6">✅ UPI / QR Code</p>
-          <p className="text-xl">UPI ID: 9892687313@okbizaxis</p>
+          <p className="text-xl">UPI ID: donate@sbi</p>
           <p className="text-xl">PhonePe / Google Pay accepted</p>
 
           <p className="text-xl font-semibold mt-6">📞 Need Assistance?</p>
-          <p className="text-xl">Call: 9892687313, 7666655757</p>
+          <p className="text-xl">Call: 9892687313 / 9082356927</p>
         </div>
 
         {/* QR Code */}
