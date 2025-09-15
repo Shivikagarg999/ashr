@@ -41,10 +41,9 @@ export default function Home() {
       </section>
 
       <Navbar />
-      <main className="flex-grow pt-16 md:pt-20">
-        
+      <main className="flex-grow">
         {/* Home Section */}
-        <section className="h-screen relative flex items-center justify-center text-center px-6 md:px-12 text-white">
+        <section className="h-screen relative flex items-center justify-center text-center px-6 md:px-12 text-white mt-16">
           {/* Background Image */}
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/header.jpeg')" }} />
 
@@ -297,7 +296,6 @@ export default function Home() {
           {/* Contact Info & Form Grid */}
           <Contact/>
         </section>
-
       </main>
       <Footer/>
     </div>
