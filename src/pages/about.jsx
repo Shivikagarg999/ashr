@@ -61,45 +61,61 @@ const AboutPage = () => {
         
         {/* Donation Section */}
 <motion.div
-  className="mt-16 bg-blue-600 text-white py-10 px-6 rounded-lg shadow-lg grid md:grid-cols-2 items-center"
+  className="mt-16 bg-blue-600 text-white py-10 px-6 rounded-lg shadow-lg"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 1 }}
 >
-  <div>
-    {/* Animated Donate Heading */}
-    <motion.h2
-      className="text-3xl font-bold mb-4 text-center md:text-left"
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      Donate & Make a Difference
-    </motion.h2>
+  <div className="grid md:grid-cols-2 items-center gap-8">
+    <div>
+      {/* Animated Donate Heading */}
+      <motion.h2
+        className="text-3xl font-bold mb-6 text-center md:text-left"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Donate & Make a Difference
+      </motion.h2>
 
-    <p className="text-lg mb-4">Donations in cash and kind are welcome. Your support helps us continue our mission.</p>
-    <p className="text-lg font-semibold">Bank: Saraswat Bank</p>
-    <p className="text-lg">Account No.: 263200100002879</p>
-    <p className="text-lg">IFSC Code: SRCB0000263</p>
-    <p className="text-lg">Branch: Koparkhairne, Navi Mumbai</p>
-    <p className="text-lg font-semibold mt-4">Contact: 9892687313 / 9082356927</p>
+      {/* Donation Amount Options */}
+      <div className="grid grid-cols-3 gap-4 mb-6">
+        <div className="bg-blue-500 p-4 rounded-lg text-center">
+          <h3 className="text-xl font-bold">₹5,000</h3>
+          <p className="text-sm mt-1">Support our programs</p>
+        </div>
+        <div className="bg-blue-500 p-4 rounded-lg text-center">
+          <h3 className="text-xl font-bold">₹10,000</h3>
+          <p className="text-sm mt-1">Sustain our initiatives</p>
+        </div>
+        <div className="bg-blue-500 p-4 rounded-lg text-center">
+          <h3 className="text-xl font-bold">₹50,000</h3>
+          <p className="text-sm mt-1">Make a significant impact</p>
+        </div>
+      </div>
 
-    {/* Animated Donate Button */}
-   {/* Animated Donate Button with Continuous Movement */}
-<motion.button
-  className="mt-6 bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg shadow-md text-lg hover:bg-yellow-500 transition-all"
-  animate={{ y: [0, -10, 0] }}  // Moves up and down continuously
-  transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}  // Infinite loop with smooth transition
-  whileHover={{ scale: 1.1 }}
-  whileTap={{ scale: 0.9 }}
->
-  Donate Now
-</motion.button>
+      <p className="text-lg mb-4">Donations in cash and kind are welcome. Your support helps us continue our mission.</p>
+      <p className="text-lg font-semibold">Bank: Saraswat Bank</p>
+      <p className="text-lg">Account No.: 263200100002879</p>
+      <p className="text-lg">IFSC Code: SRCB0000263</p>
+      <p className="text-lg">Branch: Koparkhairne, Navi Mumbai</p>
+      <p className="text-lg font-semibold mt-4">Contact: 9892687313 / 9082356927</p>
 
-  </div>
+      {/* Animated Donate Button with Continuous Movement */}
+      <motion.button
+        className="mt-6 bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg shadow-md text-lg hover:bg-yellow-500 transition-all"
+        animate={{ y: [0, -10, 0] }}  // Moves up and down continuously
+        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}  // Infinite loop with smooth transition
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        Donate Now
+      </motion.button>
+    </div>
 
-  <div className="flex justify-center">
-    <Image src="/images/scanner.jpeg" width={400} height={400} alt="Donation QR Code" className="rounded-lg shadow-md" />
+    <div className="flex justify-center">
+      <Image src="/images/scanner.jpeg" width={400} height={400} alt="Donation QR Code" className="rounded-lg shadow-md" />
+    </div>
   </div>
 </motion.div>
       </div>
@@ -108,7 +124,7 @@ const AboutPage = () => {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-blue-700">Get in Touch</h2>
         <p className="mt-3 text-lg font-medium text-gray-800">
-          We’d love to hear from you! Whether you have questions, need help, or want to collaborate, feel free to reach out.
+          We'd love to hear from you! Whether you have questions, need help, or want to collaborate, feel free to reach out.
         </p>
       </div>
     
