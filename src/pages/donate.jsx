@@ -3,33 +3,8 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Nav";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
 
 const Donate = () => {
-  const [selectedAmount, setSelectedAmount] = useState(null);
-  
-  const donationAmounts = [
-    { value: 500, label: "₹500" },
-    { value: 1000, label: "₹1,000" },
-    { value: 2000, label: "₹2,000" },
-    { value: 5000, label: "₹5,000" },
-    { value: 10000, label: "₹10,000" },
-    { value: 50000, label: "₹50,000" },
-  ];
-
-  const handleAmountSelect = (amount) => {
-    setSelectedAmount(amount);
-  };
-
-  const handleCustomAmount = (e) => {
-    const value = e.target.value;
-    if (value) {
-      setSelectedAmount(parseInt(value));
-    } else {
-      setSelectedAmount(null);
-    }
-  };
-
   return (
     <>
       <Navbar/>
@@ -51,55 +26,41 @@ const Donate = () => {
           </motion.div>
         </section>
 
-        {/* Quick Donate Section */}
+        {/* Donation Options Section */}
         <motion.div 
-          className="bg-white shadow-lg p-8 rounded-lg mb-12 max-w-3xl w-full"
+          className="mb-12 max-w-3xl w-full"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Quick Donate</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-            {donationAmounts.map((amount) => (
-              <button
-                key={amount.value}
-                onClick={() => handleAmountSelect(amount.value)}
-                className={`py-3 px-4 rounded-lg border-2 text-lg font-semibold transition-all ${
-                  selectedAmount === amount.value
-                    ? "bg-blue-600 text-white border-blue-600"
-                    : "bg-white text-blue-700 border-blue-400 hover:bg-blue-50"
-                }`}
-              >
-                {amount.label}
-              </button>
-            ))}
+          <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Make a Donation</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {/* 5K Donation */}
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 text-center">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">₹5,000</h3>
+              <p className="text-gray-700">Support our general welfare programs</p>
+            </div>
+            
+            {/* 10K Donation */}
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-green-500 text-center">
+              <h3 className="text-2xl font-bold text-green-700 mb-4">₹10,000</h3>
+              <p className="text-gray-700">Help sustain our long-term initiatives</p>
+            </div>
+            
+            {/* 50K Donation */}
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-purple-500 text-center">
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">₹50,000</h3>
+              <p className="text-gray-700">Make a significant impact on our community</p>
+            </div>
           </div>
           
-          <div className="mb-6">
-            <label htmlFor="customAmount" className="block text-lg font-medium text-gray-700 mb-2">
-              Or enter custom amount:
-            </label>
-            <input
-              type="number"
-              id="customAmount"
-              placeholder="Enter amount in ₹"
-              className="w-full p-3 border-2 border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              onChange={handleCustomAmount}
-            />
+          <div className="text-center bg-blue-50 p-6 rounded-lg">
+            <p className="text-xl text-gray-700">
+              You can also donate any custom amount to support our cause. 
+              Every contribution makes a difference.
+            </p>
           </div>
-          
-          <motion.button
-            className={`w-full py-4 px-6 rounded-lg text-xl font-bold transition-all ${
-              selectedAmount 
-                ? "bg-yellow-400 text-blue-900 hover:bg-yellow-500" 
-                : "bg-gray-300 text-gray-500 cursor-not-allowed"
-            }`}
-            whileHover={selectedAmount ? { scale: 1.02 } : {}}
-            whileTap={selectedAmount ? { scale: 0.98 } : {}}
-            disabled={!selectedAmount}
-          >
-            {selectedAmount ? `Donate ₹${selectedAmount.toLocaleString()}` : "Select an amount"}
-          </motion.button>
         </motion.div>
 
         {/* Impact Section */}
@@ -174,6 +135,18 @@ const Donate = () => {
             </p>
           </motion.div>
         </section>
+
+        {/* Static Donate Button */}
+        <motion.div
+          className="mt-10 text-center"
+          animate={{ y: [0, -5, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+        >
+          <p className="text-xl font-semibold text-gray-700 mb-4">Your generosity can transform lives</p>
+          <button className="bg-yellow-400 text-blue-900 font-bold py-4 px-8 rounded-lg shadow-md text-xl hover:bg-yellow-500 transition-all">
+            Donate Now
+          </button>
+        </motion.div>
       </div>
       <Footer/>
     </>
