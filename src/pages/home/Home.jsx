@@ -16,6 +16,33 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         
+        {/* Pitr Paksh Donation Banner */}
+        <section className="bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500 text-white py-4 px-6 md:px-12 relative overflow-hidden">
+          <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }}
+            className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10"
+          >
+            <div className="flex items-center gap-4 mb-4 md:mb-0">
+              <div className="bg-white bg-opacity-20 p-3 rounded-full">
+                <FaHandHoldingHeart className="text-2xl" />
+              </div>
+              <div>
+                <h3 className="text-lg md:text-xl font-bold">🙏 Pitr Paksh - Honor Your Ancestors</h3>
+                <p className="text-sm md:text-base opacity-90">Support our elderly with your generous donation during this sacred period</p>
+              </div>
+            </div>
+            <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0">
+              <Link href="/donate" className="inline-flex items-center gap-2 bg-white text-orange-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-orange-50 transition-all">
+                <FaHandHoldingHeart />
+                Donate Now
+              </Link>
+            </motion.div>
+          </motion.div>
+        </section>
+
         {/* Home Section */}
         <section className="h-screen relative flex items-center justify-center text-center px-6 md:px-12 text-white">
   {/* Background Image */}
@@ -203,7 +230,7 @@ export default function Home() {
   <div className="max-w-4xl mx-auto text-center">
     <h2 className="text-4xl font-extrabold text-blue-700">Get in Touch</h2>
     <p className="mt-3 text-lg font-medium text-gray-800">
-      We’d love to hear from you! Whether you have questions, need help, or want to collaborate, feel free to reach out.
+      We'd love to hear from you! Whether you have questions, need help, or want to collaborate, feel free to reach out.
     </p>
   </div>
 
