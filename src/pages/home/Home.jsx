@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow pt-16 md:pt-20">
         
         {/* Pitr Paksh Donation Banner */}
         <section className="bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500 text-white py-4 px-6 md:px-12 relative overflow-hidden">
