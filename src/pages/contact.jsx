@@ -22,6 +22,23 @@ const Contact=()=>{
               <a href="mailto:info@sweethometrust.org" className="hover:underline">info@sweethometrust.org</a>
             </li> */}
           </ul>
+          
+          {/* Donation Info in Contact Section */}
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <h4 className="text-xl font-bold text-blue-700 mb-3">Support Our Cause</h4>
+            <div className="grid grid-cols-3 gap-2 mb-3">
+              <div className="bg-blue-100 p-2 rounded text-center">
+                <p className="font-semibold">₹5,000</p>
+              </div>
+              <div className="bg-blue-100 p-2 rounded text-center">
+                <p className="font-semibold">₹10,000</p>
+              </div>
+              <div className="bg-blue-100 p-2 rounded text-center">
+                <p className="font-semibold">₹50,000</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600">Your donations help us continue our mission of service</p>
+          </div>
         </div>
     
         {/* Contact Form */}
@@ -40,4 +57,4 @@ const Contact=()=>{
     )
 }
 
-export default Contact
+export default Contact;
