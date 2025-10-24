@@ -5,7 +5,6 @@ import Lightbox from "react-modal-image";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Nav";
 
-// Sample images (Replace with your actual image URLs)
 const images = [
   "/images/childs.jpeg",
   "/images/sewa.jpeg",
