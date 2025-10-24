@@ -13,33 +13,6 @@ const fadeIn = {
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Pitr Paksh Donation Banner - Above Navbar */}
-      <section className="bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500 text-white py-3 px-6 md:px-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black bg-opacity-10"></div>
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10"
-        >
-          <div className="flex items-center gap-3 mb-2 md:mb-0">
-            <div className="bg-white bg-opacity-20 p-2 rounded-full">
-              <FaHandHoldingHeart className="text-xl" />
-            </div>
-            <div>
-              <h3 className="text-sm md:text-lg font-bold">🙏 Pitr Paksh - Honor Your Ancestors</h3>
-              <p className="text-xs md:text-sm opacity-90">Support our elderly with your generous donation during this sacred period</p>
-            </div>
-          </div>
-          <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0">
-            <Link href="/donate" className="inline-flex items-center gap-2 bg-white text-orange-600 font-semibold px-4 py-2 md:px-5 md:py-2.5 rounded-full shadow-lg hover:bg-orange-50 transition-all text-sm md:text-base">
-              <FaHandHoldingHeart className="text-sm md:text-base" />
-              Donate Now
-            </Link>
-          </motion.div>
-        </motion.div>
-      </section>
-
       <Navbar />
       <main className="flex-grow">
         {/* Home Section */}
