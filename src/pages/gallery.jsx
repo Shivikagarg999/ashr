@@ -19,6 +19,7 @@ const images = [
   "/images/award.jpeg",
   "/images/prma.jpeg",
   "/images/nm.jpeg",
+  "/images/tere.jpeg"
 ];
 
 export default function Gallery() {
